@@ -30,7 +30,15 @@ jobs:
       - run: npm ci
 
       - name: Build
-        run: npm run build
+        env:
+          # Project pages are served at https://<user>.github.io/<repo>/.
+          # SvelteKit needs that folder name so the page can load its files.
+          BASE_PATH: /${{ github.event.repository.name }}
+        run: |
+          # static/CNAME belongs to the original site. Leave it out so
+          # this copy is published on github.io.
+          rm -f static/CNAME
+          npm run build
 
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -43,6 +43,7 @@ FlowCode Agent is a local WebSocket server that bridges the editor to the Arduin
 #### 3. FlowCode App
 
 - **Development**: see [Developing](#developing) below
+- **In the browser**: [hadefuwa.github.io/flow-function-blocks](https://hadefuwa.github.io/flow-function-blocks/)
 - **Pre-built desktop app**: download the installer from [Releases](../../releases) and run it
 
 ---

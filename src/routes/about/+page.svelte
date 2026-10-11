@@ -5,7 +5,7 @@
 		ArrowRight, GitBranch, Radio, Activity,
 		ChevronRight, FileCode, Package, MonitorSmartphone, ChevronsDown,
 	} from 'lucide-svelte';
-	import { assets } from '$app/paths';
+	import { assets, base } from '$app/paths';
 	import extensionIndex from '$lib/blocks/extension';
 
 	const EXTENSIONS_INITIAL = 8;
@@ -107,12 +107,12 @@
 <!-- ─── Nav ──────────────────────────────────────────────────────── -->
 <nav class="fixed top-0 z-50 w-full border-b border-gray-800/80 bg-gray-900/80 backdrop-blur-md">
 	<div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-		<a href="/" class="flex items-center gap-2 text-sm font-semibold text-gray-100 hover:text-white transition-colors">
+		<a href="{base}/" class="flex items-center gap-2 text-sm font-semibold text-gray-100 hover:text-white transition-colors">
 			<img src="{assets}/favicon.png" alt="FlowCode" class="h-5 w-5" />
 			FlowCode
 		</a>
 		<a
-			href="/"
+			href="{base}/"
 			class="flex items-center gap-1.5 rounded-lg bg-blue-600 px-3 py-1.5 text-xs font-medium text-white hover:bg-blue-500 transition-colors"
 		>
 			Open Editor
@@ -152,7 +152,7 @@
 
 			<div class="flex flex-wrap items-center justify-center gap-3">
 				<a
-					href="/"
+					href="{base}/"
 					class="flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-900/40 hover:bg-blue-500 transition-all hover:-translate-y-0.5"
 				>
 					Open Editor
@@ -302,7 +302,7 @@
 				<h2 class="mb-4 text-4xl font-bold text-white">Ready to build?</h2>
 				<p class="mb-8 text-gray-400">No install, no signup. Open the editor and start connecting blocks.</p>
 				<a
-					href="/"
+					href="{base}/"
 					class="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-900/40 hover:bg-blue-500 transition-all hover:-translate-y-0.5"
 				>
 					Open FlowCode Editor
@@ -319,7 +319,7 @@
 				<img src="{assets}/favicon.png" alt="" class="h-4 w-4 opacity-40" />
 				FlowCode — Visual firmware builder
 			</span>
-			<a href="/" class="hover:text-gray-400 transition-colors flex items-center gap-1">
+			<a href="{base}/" class="hover:text-gray-400 transition-colors flex items-center gap-1">
 				Open Editor <ArrowRight size={11} />
 			</a>
 		</div>
